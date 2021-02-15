@@ -4,6 +4,7 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const compression = require('compression')
+const mongoose = require('mongoose')
 
 const htmlRouter = require('./routes/html_routes')
 const apiRouter = require('./routes/api_routes')
@@ -38,6 +39,11 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500)
   res.render('error')
+})
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/imageperformance', {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
 })
 
 module.exports = app
