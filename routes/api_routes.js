@@ -1,9 +1,15 @@
-const express = require('express')
-const router = express.Router()
+const db = require('../models')
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.send('respond with a resource')
-})
+module.exports = function (app) {
+  app.get('/api/images', function (req, res) {
+    db.Image.find({}).then(function (dbImages) {
+      res.json(dbImages)
+    })
+  })
 
-module.exports = router
+  app.put('/api/images/:id', function (req, res) {
+    db.Image.updateOne({ _id: req.params.id }, { rating: req.body.rating }).then(function (dbImage) {
+      res.json(dbImage)
+    })
+  })
+}
