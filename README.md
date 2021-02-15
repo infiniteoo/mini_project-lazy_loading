@@ -85,6 +85,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This mini project is a simple image gallery that utilizes "lazy loading" technology which only downloads and displays what is currently being displayed in the window, rather than download the entire contents of the website all at once.  This improves functionality and efficiency of your website's performance.
+
 ![example gif](/example/gif_1.gif)
 
 
@@ -122,15 +124,6 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
@@ -173,9 +166,7 @@ Project Link: [https://github.com/infiniteoo/https://github.com/infiniteoo/mini_
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+The majority of the code for this project was supplied in advance, and it was the student's job to finish it by writing the lazy loading display code.  I couldn't possibly publish another person's code as it were my own without giving them props.  So thanks to whoever wrote the code for Trilogy's Full Stack Web Development's lazy loading mini project.  
 
 
 
